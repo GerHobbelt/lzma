@@ -19,6 +19,10 @@
  * USA.
  */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include "../sdk/Common/MyInitGuid.h"
 #include "../sdk/Common/MyWindows.h"
 
@@ -40,14 +44,18 @@ typedef vector<string> stringVector;
 
 #include <errno.h>
 #include <fcntl.h>
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 #include "getopt.h"
 #include <signal.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>
+#if !defined(_WIN32)
 #include <utime.h>
 #include <sys/time.h> // futimes()
+#endif
 
 #if defined(_WIN32) || defined(OS2) || defined(MSDOS)
 #include <fcntl.h>

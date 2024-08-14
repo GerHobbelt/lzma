@@ -13,6 +13,10 @@
     GNU General Public License for more details.
 */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 /* Usage example:
 
    $ wget http://www.wifi-shop.cz/Files/produkty/wa2204/wa2204av1.4.1.zip
@@ -28,6 +32,8 @@
 
 */
 
+#include <stdio.h>
+#include <stdlib.h>
 
 /* LZMA compressed file format */
 /* --------------------------- */

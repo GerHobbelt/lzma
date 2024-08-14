@@ -3,7 +3,12 @@
 #include "C_FileIO.h"
 
 #include <fcntl.h>
+#ifndef _WIN32
 #include <unistd.h>
+#else
+#include <Windows.h>
+#include <io.h>
+#endif
 
 namespace NC {
 namespace NFile {

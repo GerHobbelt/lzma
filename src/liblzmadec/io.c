@@ -18,11 +18,11 @@
 
 ******************************************************************************/
 
-#ifndef LZMADEC_NO_STDIO
-
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
+
+#ifndef LZMADEC_NO_STDIO
 
 #include <stdio.h>
 #include <stdlib.h>

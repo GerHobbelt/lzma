@@ -33,7 +33,7 @@ extern int errno
 #include "../lzma_version.h"
 
 /* This can be compiled without liblzmadec's stdio support. */
-#define LZMADEC_NO_STDIO
+//#define LZMADEC_NO_STDIO
 #include <lzmadec.h>
 
 
