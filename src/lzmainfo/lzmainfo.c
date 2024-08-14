@@ -89,8 +89,13 @@ lzmainfo (FILE *file, const char *name, const char *argv0)
 	return 0;
 }
 
+
+#if defined(BUILD_MONOLITHIC)
+#define main lzma_info_main
+#endif
+
 int
-main (int argc, char **argv)
+main (int argc, const char **argv)
 {
 	FILE *file;
 	int i;

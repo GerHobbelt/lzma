@@ -9,14 +9,18 @@
 #include <lzmadec.h>
 #include "../lzma_version.h"
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <fcntl.h>
 #endif
 
 #define CHUNKSIZE_IN 4096
 #define CHUNKSIZE_OUT (1024*512)
 
-int main(int argc, char **argv)
+#if defined(BUILD_MONOLITHIC)
+#define main lzma_decode_main
+#endif
+
+int main(int argc, const char **argv)
 {
 	int ret;
 	lzmadec_stream strm;
